@@ -27,7 +27,7 @@ public_users.get('/all-books-data', (req, res) => {
 // Get the book list available in the shop (using Async/Await with Axios)
 public_users.get('/', async function (req, res) {
   try {
-    const response = await axios.get('http://localhost:5000/customer/all-books-data');
+    const response = await axios.get('http://localhost:5000/all-books-data');
     return res.status(200).send(JSON.stringify(response.data, null, 2));
   } catch (error) {
     console.error("Error fetching books:", error.message);
